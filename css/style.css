@@ -1,0 +1,383 @@
+/* Common Css Start */
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   outline:0;
+ }
+ ul{
+    list-style-type: none;
+ }
+ a{
+    text-decoration: none;
+ }
+/* //Common Css End */
+
+/* Topbar Section CSS Start */
+#topBar{
+    background: orange
+}
+
+#topBar .topbar_left{
+    color: #353535;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#topBar .topbar_mid{
+    padding: 10px 0;
+    background: black;
+    color: aliceblue;
+    transform: skew(-30deg);
+}
+#topBar .topbar_mid p{
+    transform: skew(30deg);
+    text-align: center;
+} 
+
+#topBar .topbar_right ul li {
+    position: relative;
+    margin: 0 10px;
+}
+#topBar .topbar_right ul li a{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    color: #353435;
+    line-height: 25px;
+    position: relative;
+    z-index: 99999;
+}
+#topBar .topbar_right ul li::after,
+#topBar .topbar_right ul li::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    transform: scaleX(0);
+    z-index: 999;
+    transition: all .4s linear;
+}
+#topBar .topbar_right ul li::before {
+    top: auto;
+    bottom: 0;
+}
+
+#topBar .topbar_right ul li:hover::after,
+#topBar .topbar_right ul li:hover::before {
+    transform: scaleX(1.3);
+}
+
+#topBar .topbar_right ul li a::after,
+#topBar .topbar_right ul li a::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    transform: scaleY(0);
+    transition: all .4s linear;
+}
+
+#topBar .topbar_right ul li a::before{
+    left: auto;
+    right: 0;
+}
+#topBar .topbar_right ul li a:hover::after,
+#topBar .topbar_right ul li a:hover::before{
+    transform: scaleY(1.3);
+}
+
+/* Topbar Section CSS End */
+
+/* Nav Section CSS Start */
+#nav #nav_logo{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: .3s linear;
+} 
+#nav #nav_logo.active {
+    left: 0;
+    transform: initial;
+  }
+  #nav #main_menu > ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+  }
+  #nav #main_menu ul.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  #nav #main_menu #lg_menu_toggler {
+    border: none;
+    background: none;
+    transition: 0.2s linear;
+    font-size: 20px;
+  }
+  #nav #main_menu #lg_menu_toggler:hover {
+    color: #ffca36;
+  }
+  #nav #main_menu li.dropdown ul.dropdown-menu{
+    display: initial;
+    top: 100px;
+    transition: linear .4s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #nav #main_menu li.dropdown:hover ul.dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  #nav .menu ul li{
+    position: relative;
+  }
+ #nav .menu ul li a{
+    display: inline-block;
+    text-align: center;
+    color: #353435;
+    line-height: 25px;
+    position: relative;
+ } 
+ #nav .menu ul li::after,
+#nav .menu ul li::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    transform: scaleX(0);
+    transition: all .4s linear;
+}
+#nav .menu ul li::before{
+    top: auto;
+    bottom: 0;
+}
+#nav .menu ul li:hover::after,
+#nav .menu ul li:hover::before {
+    transform: scaleX(1.3);
+}
+
+#nav .menu ul li a::after,
+#nav .menu ul li a::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    transform: scaleY(0);
+    transition: all .4s linear;
+}
+
+#nav .menu ul li a::before{
+    left: auto;
+    right: 0;
+}
+#nav .menu ul li a:hover::after,
+#nav .menu ul li a:hover::before{
+    transform: scaleY(1.3);
+}
+
+/* Nav Section CSS End */
+
+/* Banner Section Css Start */
+#banner .banner_slider_item{
+    height: 600px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  #banner{
+    position: relative;
+  }
+  #banner .banner_arrow{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    margin: 20px;
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #banner .banner_arrow#banner_left_arrow{
+    left: 0;
+  }
+  #banner .banner_arrow#banner_right_arrow{
+    right: 0;
+  }
+  #banner .banner_arrow::after,
+  #banner .banner_arrow::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    transform: scaleY(1.3);
+    transition: 0.4s linear;
+  }
+  #banner .banner_arrow::before {
+    left: auto;
+    right: 0;
+  }
+  
+  #banner .banner_arrow span::after,
+  #banner .banner_arrow span::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    background-color: white;
+    transform: scaleX(1.3);
+    transition: 0.4s linear;
+  }
+  #banner .banner_arrow span::before {
+    top: auto;
+    bottom: 0;
+  }
+  #banner .banner_arrow i{
+    font-size: 50px; 
+  }
+  /* Banner Section Css End */
+
+  /* Service Section Css Start */
+#service{
+  padding: 75px;
+}
+#service .service_item{
+  padding: 50px 12px;
+  margin-top: 50px;
+}
+#service .service_item .service_icon{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  line-height: 100px;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  transition: .3s linear;
+}
+#service .service_item .service_icon img{
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+#service .service_item .service_info{
+  border: 1px solid black;
+  padding: 12px;
+  margin-top: 60px;
+  position: relative;
+  transition: .3s linear;
+}
+#service .service_item .service_info::before {
+    content: '';
+    position: absolute;
+    height: 42px;
+    width: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 2px dashed black;
+  transition: .3s linear;
+}
+#service .service_item:hover .service_icon,
+#service .service_item:hover .service_info,
+#service .service_item:hover .service_info::before{
+  border-color: orange;
+}
+/* Service Section Css End */
+
+/* About Section Css Start */
+#about .about_img{
+  background:url(../img/about_banner.jpg);
+  background-size: cover;
+  position: relative;
+  min-height: 400px;
+}
+#about .about_img img{
+  position: absolute;
+  height: 100%;
+  right: -150px;
+}
+#about .about_content ul#aboutTab{
+  border-bottom: 5px solid #ddd;
+}
+#about .about_content ul#aboutTab li{
+  margin-right: 10px;
+}
+#about .about_content ul#aboutTab li button{
+  border: none;
+  position: relative;
+}
+#about .about_content ul#aboutTab li button::after{
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: -4px;
+  background-color: #ffca36;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .3s linear;
+}
+#about .about_content ul#aboutTab li button.active::after,
+#about .about_content ul#aboutTab li:hover button::after{
+  opacity: 1;
+  visibility: visible;
+  transform: scaleX(1);
+}
+.main_btn a {
+  background-color: orange;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 20px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  line-height: 70px;
+}
+/* About Section Css End */
+
+/* Portfolio Section CSS Start */
+ #portfolio{
+  padding: 60px;
+ }
+/* Portfolio Section CSS End */
+
+
+
+
+
+
+
+/* BackToTop Section CSS Start */
+#backToTop{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: orange;
+ padding: 10px 10px;
+ z-index: 9999;
+ display: none;
+}
+/* BackToTop Section CSS End */
